@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+int main(int argc,char**argv)
+{
+int n,i,j;
+cin>>n;
+int x,y,temp=1,tempk=1;
+for(i=0;i<n;i++)
+{
+for(j=0;j<n*2;j++)
+{
+if(x==j&&tempk==1)
+{
+cout<<"/";
+x--;
+tempk=0;
+}
+else
+if(y==j&&temp==1)
+{
+cout<<"\\";
+y++;
+temp=0;
+}
+else
+cout<<"*";
+}
+cout<<"/n";
+temp=1;tempk=1;
+}
+x=0;y=n*2-1;
+temp=1;tempk=1;
+for(i=0;i<n;i++)
+{
+for(j=0;j<n*2;j++)
+{
+if(x==j&&tempk==1)
+{
+cout<<"\\";
+x++;
+temp=0;
+}
+else
+if(y==j&&tempk==1)
+{
+cout<<"/";
+y--;
+tempk==0;
+}
+else
+cout<<"*";
+}
+cout<<"/n";
+tempk=1;temp=1;
+}
+}
