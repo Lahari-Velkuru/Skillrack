@@ -1,0 +1,27 @@
+input:
+2f3h
+output:
+ffhhh
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+char s[100];
+int n,i,j,num=0;
+scanf("%s",s);
+n=strlen(s);
+for(i=0;i<n;i++)
+{
+if(isdigit(s[i]))
+{
+num=num*10+(s[i]-'0');
+}
+if(isalpha(s[i]))
+{
+for(j=0;j<num;i++)
+printf("%c",s[i]);
+num=0;
+}
+}
+}
